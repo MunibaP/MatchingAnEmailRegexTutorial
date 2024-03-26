@@ -260,6 +260,6 @@ I appreciate and encourage any questions you may have. Feel free to reach out fo
 [Deployed GitHub-Gist Link]()
 
 **GitHub Repository:** 
-[GitHub Repository]()
+[GitHub Repository](https://github.com/MunibaP/MatchingAnEmailRegexTutorial.git)
 
 Copyright © 2024 Muniba Pervez
