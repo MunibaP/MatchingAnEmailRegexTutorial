@@ -27,7 +27,7 @@ This regex is used to validate email adresses. It checks for a string that begin
 
 ### Anchors
 
-In regular expressions, anchors are special characters that define specific positions within a string. The `^` and `$` symbols are two main anchors in regex. The `^` symbol denotes the start of a string, while the `$` symbol represents the end of a string. These two anchors ensure that the pattern specified in the regex matches only at the beginning or end of the string, respectively. As a result, these two anchors are crucial for enforcing strict constraints on where a pattern can occur within a text or string. 
+In regular expressions, anchors are special characters that define specific position within a string. The `^` and `$` symbols are two main anchors in regex. The `^` symbol denotes the start of a string, while the `$` symbol represents the end of a string. These two anchors ensure that the pattern specified in the regex matches only at the beginning or end of the string, respectively. As a result, these two anchors are crucial for enforcing strict constraints on where a pattern can occur within a text or string. 
 
 - **Example:**
 
@@ -109,7 +109,7 @@ Thus, some examples that would match this regex include:
 
 - String that should NOT match: "user123@example.com.net", "user123@example.org".
 
-3. Capturing groups, on the other hand, capture the matched character sequences for possible re-use (retrieval or manipulation). In other words, captured groups are useful for extracting specific parts of the matched text or for referencing within the regex pattern itself.   
+3. Capturing groups, on the other hand, captures the matched character sequences for possible re-use (retrieval or manipulation). In other words, captured groups are useful for extracting specific parts of the matched text or for referencing within the regex pattern itself.   
 
 Now, let's consider our email address regex for this tutorial:
 
@@ -174,7 +174,7 @@ In the provided email address regex:
 
     - `\.`: matches literal dot character. 
 
-Therefore, bracket expressions provide a concise way to define sets of characters or character ranges to match against individual characters in the input text. This offers flexibility and precision in pattern matching, ensuring that specific characters are are accurately matched within the text. As a result, bracket expressions significantly contribute to the effectiveness and accuracy of regex pattern matching.
+Therefore, bracket expressions provide a concise way to define sets of characters or character ranges to match against individual characters in the input text. This offers flexibility and precision in pattern matching, ensuring that specific characters are accurately matched within the text. As a result, bracket expressions significantly contribute to the effectiveness and accuracy of regex pattern matching.
 
 ### Character Classes
 
@@ -200,7 +200,7 @@ In the provided email address regex:
 
 3. **Repeating Character Classes:**
 
-    - The email regex uses "+" after character classes like `[a-z\.]` to allow repeating occurrences of lowercase letters or dots.
+    - The email regex uses `+` after character classes like `[a-z\.]` to allow repeating occurrences of lowercase letters or dots.
 
     - As previously discussed, `[a-z\.]+` means one or more lowercase letters or dots can appear in the local part of the email address. 
 
@@ -232,21 +232,19 @@ Flag types commonly used includes:
 
 - `i (ignore case)`: Enabling this flag makes the regex case-insensitive, allowing it to match email addresses regardless of the letter case.
 
-- `m (Multi-line)`: This regex modifier alters the behavior of the `^` and `$` anchors. As we know, the `^` matches the start of a string and `$` matches the end of a string. However, when the `m` flag is used, these anchors also match the start and end of each line within a multi-line string. Hence, this allows more precise matching in multi-line contexts where each line needs to be considered independently.  
-
+- `m (Multi-line)`: This regex modifier alters the behavior of the `^` and `$` anchors. As previously discussed, the `^` symbol matches the start of a string and `$` symbol matches the end of a string. However, when the `m` flag is used, these anchors also match the start and end of each line within a multi-line string. Hence, this allows more precise matching in multi-line context where each line needs to be considered independently.  
 
 In summary, flags in regular expressions serve as modifiers, allowing developers to control various aspects such as case sensitivity, multiline matching, and global matching, thereby enhancing the flexibility and precision of pattern matching operations.
 
 ### Character Escapes
 
-Character escapes in regex allow special characters to be treated literally, ensuring precise matching in patterns. For instance, the backslash `\` before a metacharacter like `.`, `*`, or `?` indicates that it should be treated as a regular character. 
+Character escapes in regex allow special characters to be treated literally, ensuring precise matching in patterns. For instance, the backslash `\` before a metacharacters like `.`, `*`, or `?` indicates that it should be treated as a regular character. 
 
-In our email address tutorial, the following  character escapes are included:
+In our email address tutorial, the following character escapes are included:
 
-- `.`: Represents a literal dot character. Similarly, when combined with a backslash `\` such as `\.`, it ensures that the dot is treated as a literal characters insead of metacharacter.  
+- `.`: Represents a literal dot character. Similarly, when combined with a backslash `\` such as `\.`, it ensures that the dot is treated as a literal characters insead of a metacharacter.  
 
-- `\`: It is used to treat metacharacters as literals in regex. Similarly, when combined with letters it represents any digits characters (0-9). 
-
+- `\`: It is used to treat metacharacters as literals in regex. Similarly, when combined with letters such as `\d` it represents any digits characters (0-9). 
 
 In conclusion, character escapes in regular expressions, such as the backslash `\`, are essential for ensuring that certain characters are interpreted literally, rather than as metacharacters with special meaning. Therefore, they ensure accuracy and precision in regex pattern. 
 
